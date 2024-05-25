@@ -9,7 +9,7 @@ rate_limiter = ChatRateLimiter(request_limit=100, token_limit=4e5)
 encoding = tiktoken.get_encoding("cl100k_base")
 PROMPTS = {
     "markdown": "Translate this English markdown formated text wrapped by triple `\"` to Chinese and output only the translated content (so you shouldn't output triple `\"`), don't include any explainations:\n\"\"\"\n{}\n\"\"\"\nThe text is from a markdown cell of a kaggle notebook, please provide a natural and understandable translation in terms of the context.",
-    "code": "Translate only the comments lines begin with a `#` in the following Python code wrapped by triple `\"` to Chinese and output the entire content (but you shouldn't output triple `\"`), don't include any explaination, don't translate any code:\n\"\"\"\n{}\n\"\"\"\nThe code is from a code cell of a kaggle notebook regarding Titanic survival predictions, please provide a natural and understandable translation in terms of the context.",
+    "code": "Translate only the comments lines begin with a `#` in the following Python code wrapped by triple `\"` to Chinese and output the entire content including translated comments and original code (but you shouldn't output triple `\"`), don't include any explaination, don't translate any code:\n\"\"\"\n{}\n\"\"\"\nThe code is from a code cell of a kaggle notebook regarding Titanic survival predictions, please provide a natural and understandable translation in terms of the context.",
     # "raw": "RAW"
 }
 
