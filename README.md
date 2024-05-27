@@ -1,2 +1,3 @@
 # gpt-translator-for-ipynb
-Use GPT API to translate jupyter notebooks.
+
+Use OpenAI compatible API to translate jupyter notebooks.
